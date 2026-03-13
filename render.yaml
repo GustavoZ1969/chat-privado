@@ -1,0 +1,14 @@
+services:
+    - type: web
+      name: chat-privado-api
+      runtime: node
+      buildCommand: echo ok
+      startCommand: node server.cjs
+      envVars:
+        - key: DATABASE_URL
+          sync: false
+        - key: ADMIN_EMAIL
+          sync: false
+        - key: NODE_ENV
+          value: production
+  
